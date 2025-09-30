@@ -1,0 +1,336 @@
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #121212;
+  color: #fff;
+  font-family: 'Georgia', serif;
+  line-height: 1.6;
+  font-size: 18px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: #bbb;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #fff;
+}
+
+/* Container for consistent horizontal padding */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header styles */
+.header {
+  border-bottom: 1px solid #333;
+  padding: 20px 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Georgia', serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #fff;
+}
+
+.nav-buttons .btn {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 8px 16px;
+  margin-left: 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-buttons .btn.sign-in:hover {
+  background-color: #333;
+}
+
+.nav-buttons .btn.sign-up {
+  background-color: #fff;
+  color: #121212;
+  border: none;
+}
+
+.nav-buttons .btn.sign-up:hover {
+  background-color: #ddd;
+}
+
+/* Main content */
+.main-content {
+  flex-grow: 1;
+  padding: 40px 0 80px;
+}
+
+.intro {
+  max-width: 600px;
+}
+
+.main-heading {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  color: #fff;
+}
+
+.description {
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+.highlight-quote {
+  background-color: #333;
+  padding: 20px;
+  margin: 30px 0;
+  font-style: italic;
+  font-weight: 600;
+  color: #eee;
+  border-radius: 6px;
+  max-width: 600px;
+}
+
+/* Actions section */
+.actions {
+  margin-top: 60px;
+  border-top: 1px solid #333;
+  max-width: 600px;
+}
+
+.action-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+  border-bottom: 1px solid #333;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.action-item:hover {
+  color: #1a8917;
+}
+
+.arrow {
+  font-size: 2.5rem;
+  font-weight: 700;
+  transition: transform 0.3s ease;
+}
+
+.action-item:hover .arrow {
+  transform: translateX(10px);
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid #333;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #888;
+}
+
+.footer-logo {
+  font-family: 'Georgia', serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #fff;
+}
+
+.footer-links a {
+  margin-left: 20px;
+  color: #888;
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+/* Training Cards */
+.cards-container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.training-card {
+  max-width: 45%; /* roughly two cards per row */
+  margin: 10px auto;
+  height: 300px; /* increase height for larger cards */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+.training-card {
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 45%; /* roughly two cards per row */
+  margin: 10px auto;
+  height: 300px; /* increase height for larger cards */
+}
+
+.training-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  
+}
+
+.training-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.training-img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.training-arrow {
+  font-size: 2rem;
+  color: #1a8917;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .container {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-buttons {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav-buttons .btn {
+    flex: 1;
+    margin-left: 0;
+    margin-right: 10px;
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .nav-buttons .btn:last-child {
+    margin-right: 0;
+  }
+
+  .main-heading {
+    font-size: 2.5rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .action-item {
+    font-size: 1.5rem;
+  }
+
+  .arrow {
+    font-size: 2rem;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .training-card {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .training-img {
+    height: auto;
+    max-height: 150px;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 12px;
+  }
+
+  .footer-links {
+    margin-top: 10px;
+  }
+
+  .footer-links a {
+    margin-left: 0;
+    margin-right: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-heading {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .action-item {
+    font-size: 1.2rem;
+  }
+
+  .arrow {
+    font-size: 1.8rem;
+  }
+}
